@@ -1,3 +1,11 @@
+function getComputerChoice() {
+    // generate random number, multiply by 3, and round to an integer
+    const randNum = Math.floor((Math.random() * 3) + 1);
+    // check the number and return ‘Rock’, ‘Paper’ or ‘Scissors’
+    if (randNum === 1) return 'Rock';
+    else if (randNum === 2) return 'Paper';
+    else return 'Scissors';
+}
 
 
 /*

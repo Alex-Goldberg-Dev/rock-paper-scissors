@@ -18,19 +18,22 @@ function playRound(playerSelection, computerSelection) {
     else return 'Draw!'
   }
 
-  const playerSelection = "rock";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
 
+// function to play a best-of-five series
+function game() {
+    let playerWins = 0;
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt('Select rock, paper, or scissors!');
+        const computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+/*     if (playerWins >= 3) {console.log('Congratulations! You win!')}
+    else {console.log('Try again! You lose!')} */
+}
 
 /*
-Write a NEW function called game(). Call the playRound function inside of this one to play a 5 round game that keeps score and reports
-a winner or loser at the end.
-Remember loops? This is a great opportunity to use one to play those five rounds:
-
-for (let i = 0; i < 5; i++) {
-   // your code here!
-}
 At this point you should be using console.log() to display the results of each round and the winner at the end.
 Use prompt() to get input from the user. Read the docs here if you need to.
 Feel free to re-work your previous functions if you need to. Specifically, you might want to change the return value to something more useful.

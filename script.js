@@ -18,9 +18,6 @@ function playRound(playerSelection, computerSelection) {
     else {console.log('Draw!'); return 'draw'}
   }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-
 // function to play a best-of-five series
 function game() {
     let playerWins = 0;

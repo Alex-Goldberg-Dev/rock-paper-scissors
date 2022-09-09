@@ -24,13 +24,17 @@ const computerSelection = getComputerChoice();
 // function to play a best-of-five series
 function game() {
     let playerWins = 0;
+    let computerWins = 0
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Select rock, paper, or scissors!');
         const computerSelection = getComputerChoice();
         const result = playRound(playerSelection, computerSelection);
         if (result === 'player') playerWins++;
-        else if (result === 'draw') i--;
+        else if (result === 'computer') computerWins++;
+        else i--;
+        if (playerWins === 3 || computerWins === 3) i = 5;
+        else console.log(`User: ${playerWins} Computer: ${computerWins}`)
     }
-    if (playerWins >= 3) {console.log('Congratulations! You win!')}
+    if (playerWins === 3) {console.log('Congratulations! You win!')}
     else {console.log('Try again! You lose!')}
 }

@@ -9,13 +9,13 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     // compare the choices and return the winner accordingly
-    if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') return 'You Win! Rock beats Scissors';
-    else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') return 'You Win! Scissors beats Paper';
-    else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') return 'You Win! Paper beats Rock';
-    else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') return 'You Lose! Paper beats Rock';
-    else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock') return 'You Lose! Rock beats Scissors';
-    else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') return 'You Lose! Scissors beats Paper';
-    else return 'Draw!'
+    if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') {console.log('You Win! Rock beats Scissors'); return 'player';}
+    else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') {console.log('You Win! Scissors beats Paper'); return 'player';}
+    else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') {console.log('You Win! Paper beats Rock'); return 'player';}
+    else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') {console.log('You Lose! Paper beats Rock'); return 'computer';}
+    else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock') {console.log('You Lose! Rock beats Scissors'); return 'computer';}
+    else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') {console.log('You Lose! Scissors beats Paper'); return 'computer';}
+    else {console.log('Draw!'); return 'draw'}
   }
 
 const playerSelection = "rock";

@@ -27,15 +27,10 @@ function game() {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Select rock, paper, or scissors!');
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
+        const result = playRound(playerSelection, computerSelection);
+        if (result === 'player') playerWins++;
+        else if (result === 'draw') i--;
     }
-/*     if (playerWins >= 3) {console.log('Congratulations! You win!')}
-    else {console.log('Try again! You lose!')} */
+    if (playerWins >= 3) {console.log('Congratulations! You win!')}
+    else {console.log('Try again! You lose!')}
 }
-
-/*
-At this point you should be using console.log() to display the results of each round and the winner at the end.
-Use prompt() to get input from the user. Read the docs here if you need to.
-Feel free to re-work your previous functions if you need to. Specifically, you might want to change the return value to something more useful.
-Feel free to create more “helper” functions if you think it would be useful.
-*/
